@@ -10,4 +10,4 @@ if __name__ == '__main__':
             if not User.query.filter_by(user_name='harry').first():
                 User.create_user(user='harry', email='harry@hogwarts.com', password='secret')
         except exc.IntegrityError:
-            flask_app.run()
+                flask_app.run()
