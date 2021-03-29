@@ -3,7 +3,11 @@ from flask_login import login_user, logout_user, login_required, current_user
 from app.auth.forms import RegistrationForm, LoginForm
 from app.auth import authentication as at
 from app.auth.models import User
+from datetime import datetime
 
+@main.context_processor
+def inject_now():
+    return dict(now=datetime.utcnow())
 
 @at.route('/register', methods=['GET', 'POST'])
 def register_user():
