@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %} SignIn {% endblock %}
+
+{% block content %}
+    <div class="container login-msg">
+    <h4> Login Here </h4>
+    <hr><br>
+        <div> 
+            {{ form.hidden_tag() }}
+            {{ wtf.quick_form(form) }} 
+        </div>
+    </div>
+{% endblock content %}
