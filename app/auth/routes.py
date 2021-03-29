@@ -5,7 +5,7 @@ from app.auth import authentication as at
 from app.auth.models import User
 from datetime import datetime
 
-@main.context_processor
+@at.context_processor
 def inject_now():
     return dict(now=datetime.utcnow())
 
